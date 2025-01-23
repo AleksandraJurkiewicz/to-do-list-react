@@ -7,6 +7,7 @@ const Buttons = (props) => (
                 {props.hideDone ? "Pokaż" : "Ukryj"} ukończone
             </button>
             <button
+                onClick={props.setAllDone}
                 className="buttons__button"
                 disabled={props.tasks.every(({ done }) => done)}
             >Ukończ wszystkie</button>
