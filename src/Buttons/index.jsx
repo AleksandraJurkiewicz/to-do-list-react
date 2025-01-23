@@ -3,7 +3,7 @@ import "./style.css"
 const Buttons = (props) => (
     props.tasks.length > 0 && (
         <div className="buttons">
-            <button className="buttons__button">
+            <button onClick={props.toggleHideDone} className="buttons__button">
                 {props.hideDone ? "Pokaż" : "Ukryj"} ukończone
             </button>
             <button
