@@ -10,7 +10,7 @@
     margin: 0 0 0 20px;
     padding: 5px 10px;
     transition: 0.3s;
-    scale: 0.65;
+    font-size: 15px;
 }
 
 @media(max-width: 767px) {
