@@ -1,8 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { TaskAdding, Button, TaskPlace } from "./styled";
 
 const Form = ({ addNewTask }) => {
     const [newTaskContent, setNewTaskContent] = useState("");
+    const inputRef = useRef(null);
+
+    const focusInput = () => {
+        inputRef.current.focus();
+    };
 
     const onFormSubit = (event) => {
         event.preventDefault();
@@ -18,12 +23,13 @@ const Form = ({ addNewTask }) => {
     return (
         <TaskAdding onSubmit={onFormSubit}>
             <TaskPlace
+                ref={inputRef}
                 value={newTaskContent}
                 placeholder="Co jest do zrobienia?"
                 onChange={({ target }) => setNewTaskContent(target.value)}
                 required
             />
-            <Button>Dodaj zadanie</Button>
+            <Button onClick={focusInput}>Dodaj zadanie</Button>
         </TaskAdding>
     );
 };
