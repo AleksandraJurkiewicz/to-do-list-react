@@ -1,14 +1,14 @@
-import "./style.css"
+import { Content, Header, Wrapper } from "./styled";
 
 const Section = ({ title, sectionContent, extraHeaderContent }) => (
-    <section className="section">
-        <h2 className="section__header--second">{title}
+    <Wrapper>
+        <Header>{title}
             {extraHeaderContent}
-        </h2>
-        <div className="section__content">
+        </Header>
+        <Content>
             {sectionContent}
-        </div>
-    </section>
+        </Content>
+    </Wrapper>
 );
 
 export default Section;

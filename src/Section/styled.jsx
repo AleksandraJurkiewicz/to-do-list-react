@@ -1,17 +1,12 @@
-.section {
+import styled from "styled-components";
+
+export const Wrapper = styled.section`
     margin: 10px 0;
     background: white;
     box-shadow: 0 0 5px #ddd;
-}
+`;
 
-.section__header--first {
-    margin: 0;
-    padding: 20px;
-    font-size: 20px;
-    border-bottom: 1px solid #ddd;
-}
-
-.section__header--second {
+export const Header = styled.h2`
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 20px;
@@ -20,15 +15,13 @@
     padding: 20px;
     border-bottom: 1px solid #ddd;
     margin-bottom: 0px;
-}
 
-@media(max-width: 767px) {
-    .section__header--second {
+    @media(max-width: 767px) {
         grid-template-columns: 1fr;
         margin: 10px;
     }
-}
+`;
 
-.section__content {
+export const Content = styled.div`
     padding: 20px;
-}
+`;
