@@ -5,9 +5,6 @@ const Form = ({ addNewTask }) => {
     const [newTaskContent, setNewTaskContent] = useState("");
     const inputRef = useRef(null);
 
-        
-    
-
     const onFormSubit = (event) => {
         event.preventDefault();
         const trimmedNewTaskContent = newTaskContent.trim();
