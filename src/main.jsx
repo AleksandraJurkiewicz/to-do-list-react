@@ -4,9 +4,11 @@ import { GlobalStyle } from './GlobalStyle.jsx';
 import App from './App.jsx';
 import { ThemeProvider } from 'styled-components';
 import { theme } from "./theme";
+import { Normalize } from "styled-normalize";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Normalize />
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <App />
