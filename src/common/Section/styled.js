@@ -16,7 +16,7 @@ export const Header = styled.h2`
     border-bottom: 1px solid ${({ theme }) => theme.color.alto};
     margin-bottom: 0px;
 
-    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}) {
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
         grid-template-columns: 1fr;
         margin: 10px;
     }
