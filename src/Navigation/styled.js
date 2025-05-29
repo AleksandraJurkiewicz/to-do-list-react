@@ -25,6 +25,10 @@ export const List = styled.ul`
     display: flex;
     justify-content: center;
     list-style: none;
+
+    @media(max-width: ${({ theme }) => theme.breakpoint.mobileMax}px) {
+        min-width: 300px;
+    }
 `;
 
 export const Item = styled.li`
