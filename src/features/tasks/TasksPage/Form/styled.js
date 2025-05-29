@@ -26,8 +26,3 @@ export const Button = styled.button`
         background-color: ${({ theme }) => theme.color.cyan};
     }
 `;
-
-export const TaskPlace = styled.input`
-    border: 1px solid ${({ theme }) => theme.color.alto};
-    padding: 10px;
-`;

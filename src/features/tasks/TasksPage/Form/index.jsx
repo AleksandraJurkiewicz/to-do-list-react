@@ -1,8 +1,9 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { nanoid } from "@reduxjs/toolkit";
-import { TaskAdding, Button, TaskPlace } from "./styled";
-import { addTask } from "../tasksSlice";
+import { TaskAdding, Button } from "./styled";
+import { addTask } from "../../tasksSlice";
+import Input from "../../Input";
 
 const Form = () => {
     const [newTaskContent, setNewTaskContent] = useState("");
@@ -29,7 +30,7 @@ const Form = () => {
 
     return (
         <TaskAdding onSubmit={onFormSubit}>
-            <TaskPlace
+            <Input
                 ref={inputRef}
                 value={newTaskContent}
                 placeholder="Co jest do zrobienia?"
