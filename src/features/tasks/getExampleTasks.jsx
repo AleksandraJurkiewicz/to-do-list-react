@@ -1,4 +1,4 @@
-const exampleTasksURL = "/to-do-list-react/exampleTasks.json"
+const exampleTasksURL = "/to-do-list-react/exampleTasks.json";
 
 export const getExampleTasks = async () => {
     const response = await fetch(exampleTasksURL);
